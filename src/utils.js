@@ -74,10 +74,11 @@ export function removeCityFromStorage(cityId) {
 
 // Function get API data and use local IDs to build weather data
 export async function parseCitiesFromLocalStorage() {
+
     let itemStorage = localStorage.getItem('cities');
 
     if(!itemStorage) {
-        return;
+        return [];
     }
 
     itemStorage = JSON.parse(itemStorage);
